@@ -99,10 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           </div>
 
           {/* Value Proposition */}
-          <div className="space-y-2">
-            <p className="text-lg sm:text-xl font-medium text-cyan-200/90 font-inter">
-              Eastern India’s Premier Techno-Cultural Odyssey
-            </p>
+          <div>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter max-w-xl">
               Where visionary student engineers, ethical hackers, combat robot builders, and artists converge at Usha Martin University, Ranchi.
             </p>
