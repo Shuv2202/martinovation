@@ -41,7 +41,7 @@ const TRANSIT_ROUTES: TransitRoute[] = [
     distance: '32 KM',
     duration: '45 - 55 Mins',
     recommended: 'Pre-paid Airport Taxi via Ranchi Ring Road (smooth multi-lane route)',
-    shuttleInfo: 'Dedicated hospitality volunteers stationed at Arrival Gate from Oct 14th evening.'
+    shuttleInfo: 'Dedicated hospitality volunteers stationed at Arrival Gate from Oct 04th evening.'
   },
   {
     id: 'bus',

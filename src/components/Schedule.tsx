@@ -35,10 +35,11 @@ export const Schedule: React.FC = () => {
 
   // Create Google Calendar event link helper
   const getGoogleCalendarUrl = (title: string, desc: string, venue: string, dayNum: number, timeStr: string) => {
-    // Festival dates: Oct 15-19, 2026
-    const day = 14 + dayNum; // 15 to 19
-    const startTime = `202610${day}T090000Z`;
-    const endTime = `202610${day}T170000Z`;
+    // Festival dates: Oct 05-09, 2026
+    const day = 4 + dayNum; // 05 to 09
+    const dayFormatted = day < 10 ? `0${day}` : `${day}`;
+    const startTime = `202610${dayFormatted}T090000Z`;
+    const endTime = `202610${dayFormatted}T170000Z`;
     const details = encodeURIComponent(`${desc}\n\nVenue: ${venue}, Usha Martin University, Angara, Ranchi.\nWebsite: https://martinovation.umu.ac.in`);
     const loc = encodeURIComponent(`Usha Martin University, Angara, Ranchi, Jharkhand`);
     const name = encodeURIComponent(`Martinovation 2026: ${title}`);

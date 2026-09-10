@@ -20,8 +20,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
-  // Target festival date: October 15, 2026
-  const targetDate = new Date('2026-10-15T09:00:00');
+  // Target festival date: October 05, 2026
+  const targetDate = new Date('2026-10-05T09:00:00');
 
   const [timeLeft, setTimeLeft] = useState({
     days: 36,
@@ -109,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-rajdhani font-semibold text-slate-300">
             <div className="flex items-center gap-1.5 bg-slate-900/90 px-3.5 py-2 rounded-lg border border-slate-800">
               <Calendar className="w-4 h-4 text-cyan-400" />
-              <span>Oct 15 - 19, 2026</span>
+              <span>Oct 05 - 09, 2026</span>
             </div>
             <div className="flex items-center gap-1.5 bg-slate-900/90 px-3.5 py-2 rounded-lg border border-slate-800">
               <MapPin className="w-4 h-4 text-purple-400" />
