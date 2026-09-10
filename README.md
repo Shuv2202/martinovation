@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Martinovation — Genesis of Tomorrow
 
-# Run and deploy your AI Studio app
+Official Techno-Management Fest & Hackathon Web Portal for Usha Martin University (UMU), Angara, Ranchi.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/9c3d3b5d-b47a-4461-8d0f-e5a5901cd65d
+- **Holo-Pass Badge Generator**: Interactive live badge generator canvas.
+- **20+ Challenge Arenas**: Multi-category hackathon, robotics, and coding challenges.
+- **My Deck Itinerary**: Bookmarking system for saved events synced to LocalStorage.
+- **Registration Terminal & Squad Builder**: Dynamic team registration interface.
+- **Campus Radar**: Campus transit and route logistics guide.
+- **Synthesized Web Audio**: Custom Web Audio API sound FX engine.
 
-## Run Locally
+## Local Development
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js / Bun
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   bun install # or npm install
+   ```
+
+2. Configure environment variables (optional):
+   Copy `.env.example` to `.env.local` and set your `GEMINI_API_KEY`.
+
+3. Run dev server:
+   ```bash
+   bun run dev # or npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   bun run build # or npm run build
+   ```
+
