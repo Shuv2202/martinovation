@@ -176,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
             <span>© {new Date().getFullYear()} Martinovation. All Rights Reserved.</span>
             <span className="hidden sm:inline">•</span>
             <span className="text-slate-300 font-semibold">
-              Designed for Usha Martin University
+              Designed by students of Usha Martin University
             </span>
           </div>
 
