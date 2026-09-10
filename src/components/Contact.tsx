@@ -52,17 +52,17 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden">
+    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden bg-[#050508]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
-            <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
+            <MessageSquare className="w-3.5 h-3.5 text-red-400" />
             <span>Connect & Clarity</span>
           </div>
 
           <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Campus HQ & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-yellow-400">Inquiries</span>
+            Campus HQ & <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-400">Inquiries</span>
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter">
@@ -76,7 +76,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
           <div className="lg:col-span-5 space-y-6">
             <div className="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-xl backdrop-blur-md space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-rajdhani font-bold text-cyan-400 uppercase tracking-widest">
+                <span className="text-xs font-rajdhani font-bold text-red-400 uppercase tracking-widest">
                   Festival Headquarters
                 </span>
                 <h3 className="font-orbitron text-2xl font-bold text-white">
@@ -90,7 +90,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
               <div className="space-y-4 pt-2 border-t border-slate-800 text-sm font-inter">
                 {/* Location */}
                 <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 shrink-0">
+                  <div className="p-2.5 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -105,7 +105,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
 
                 {/* Email */}
                 <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-400 shrink-0">
+                  <div className="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -114,7 +114,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                     </h4>
                     <a
                       href="mailto:martinovation@umu.ac.in"
-                      className="text-cyan-300 hover:text-cyan-200 transition-colors font-medium break-all"
+                      className="text-red-400 hover:text-red-300 transition-colors font-medium break-all"
                     >
                       martinovation@umu.ac.in
                     </a>
@@ -123,7 +123,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
 
                 {/* Phone Helpdesk */}
                 <div className="flex items-start gap-3.5">
-                  <div className="p-2.5 rounded-lg bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 shrink-0">
+                  <div className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 shrink-0">
                     <PhoneCall className="w-5 h-5" />
                   </div>
                   <div>
@@ -143,7 +143,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                   href="https://maps.google.com/?q=Usha+Martin+University+Ranchi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                  className="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl bg-red-500/15 hover:bg-red-500/25 text-red-300 border border-red-500/30 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
                 >
                   <MapPin className="w-4 h-4" />
                   <span>Google Maps</span>
@@ -154,7 +154,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                   href="https://instagram.com/ushamartinuniv"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl bg-pink-500/15 hover:bg-pink-500/25 text-pink-300 border border-pink-500/30 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                  className="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                   <span>Instagram</span>
@@ -168,7 +168,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
           <div className="lg:col-span-7">
             <div className="p-8 sm:p-10 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-xl backdrop-blur-md space-y-6">
               <div className="space-y-1">
-                <span className="text-xs font-rajdhani font-bold text-yellow-400 uppercase tracking-widest">
+                <span className="text-xs font-rajdhani font-bold text-amber-400 uppercase tracking-widest">
                   Quick Message Dispatch
                 </span>
                 <h3 className="font-orbitron text-2xl font-bold text-white">
@@ -203,7 +203,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                         onChange={(e) => setEnquiryData({ ...enquiryData, name: e.target.value })}
                         placeholder="John Doe"
                         required
-                        className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       />
                     </div>
 
@@ -218,7 +218,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                         onChange={(e) => setEnquiryData({ ...enquiryData, email: e.target.value })}
                         placeholder="name@college.edu"
                         required
-                        className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                        className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       />
                     </div>
                   </div>
@@ -233,7 +233,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       value={enquiryData.subject}
                       onChange={(e) => setEnquiryData({ ...enquiryData, subject: e.target.value })}
                       placeholder="e.g. Outstation Hostel Lodging Query, Robotics Arena Specs"
-                      className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                     />
                   </div>
 
@@ -248,14 +248,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                       onChange={(e) => setEnquiryData({ ...enquiryData, message: e.target.value })}
                       placeholder="Please write your questions here..."
                       required
-                      className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+                      className="w-full py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 text-black font-orbitron font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.3)] transition-all"
+                    className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 hover:brightness-110 text-white font-orbitron font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,23,68,0.3)] transition-all"
                   >
                     <Send className="w-4 h-4" />
                     <span>{isSubmitting ? 'Transmitting...' : 'Dispatch Message'}</span>
@@ -269,8 +269,8 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
         {/* FAQ Accordion Section */}
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center space-y-2 mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 text-xs font-rajdhani uppercase font-bold">
-              <HelpCircle className="w-3.5 h-3.5 text-yellow-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-rajdhani uppercase font-bold">
+              <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
               <span>Got Questions?</span>
             </div>
             <h3 className="font-orbitron text-2xl sm:text-3xl font-black text-white">
@@ -289,21 +289,21 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                   key={faq.id}
                   className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                     isOpen
-                      ? 'bg-slate-900/90 border-cyan-500/50 shadow-[0_0_25px_rgba(0,240,255,0.15)]'
+                      ? 'bg-slate-900/90 border-red-500/50 shadow-[0_0_25px_rgba(255,23,68,0.15)]'
                       : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
                   }`}
                 >
                   <button
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full py-4 sm:py-5 px-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    className="w-full py-4 sm:py-5 px-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-red-500"
                     aria-expanded={isOpen}
                   >
                     <span className="font-orbitron text-base sm:text-lg font-bold text-white pr-2">
                       {faq.question}
                     </span>
                     <div
-                      className={`p-1.5 rounded-lg bg-slate-800 text-cyan-400 transition-transform duration-300 shrink-0 ${
-                        isOpen ? 'rotate-180 bg-cyan-500/20' : ''
+                      className={`p-1.5 rounded-lg bg-slate-800 text-red-400 transition-transform duration-300 shrink-0 ${
+                        isOpen ? 'rotate-180 bg-red-500/20' : ''
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />

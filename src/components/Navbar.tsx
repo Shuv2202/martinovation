@@ -86,8 +86,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#050811]/90 backdrop-blur-xl border-b border-cyan-500/20 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.8)]'
-            : 'bg-gradient-to-b from-[#050811]/90 via-[#050811]/50 to-transparent py-5'
+            ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-red-500/20 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.9)]'
+            : 'bg-gradient-to-b from-[#050508]/95 via-[#050508]/60 to-transparent py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,13 +96,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 rounded-lg p-1"
             >
               <MartinovationLogo size="sm" />
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-slate-950/70 border border-slate-800/80 backdrop-blur-md shadow-inner">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-slate-950/80 border border-slate-800/90 backdrop-blur-md shadow-inner">
               {NAV_ITEMS.map((item) => {
                 const isActive = activeSection === item.href.substring(1);
                 return (
@@ -112,13 +112,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={(e) => handleNavClick(e, item.href)}
                     className={`relative px-3.5 py-1.5 rounded-full text-xs font-orbitron font-medium tracking-wide transition-all ${
                       isActive
-                        ? 'text-cyan-300 font-bold bg-cyan-500/10 shadow-[0_0_12px_rgba(0,240,255,0.2)]'
-                        : 'text-slate-300 hover:text-cyan-200 hover:bg-slate-900/60'
+                        ? 'text-red-400 font-bold bg-red-500/10 shadow-[0_0_12px_rgba(255,23,68,0.2)]'
+                        : 'text-slate-300 hover:text-red-300 hover:bg-slate-900/60'
                     }`}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-[2px] bg-cyan-400 rounded-full shadow-[0_0_8px_#00f0ff]" />
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-[2px] bg-red-500 rounded-full shadow-[0_0_8px_#ff1744]" />
                     )}
                   </a>
                 );
@@ -136,15 +136,15 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   className={`relative px-3 py-2 rounded-lg border text-xs font-rajdhani font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
                     deckCount > 0
-                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_12px_rgba(0,240,255,0.3)]'
-                      : 'bg-slate-900/80 border-slate-800 text-slate-300 hover:border-slate-700'
+                      ? 'bg-red-500/20 border-red-500 text-red-300 shadow-[0_0_12px_rgba(255,23,68,0.3)]'
+                      : 'bg-slate-950/80 border-slate-800 text-slate-300 hover:border-slate-700'
                   }`}
                   title="View Shortlisted Challenges"
                 >
-                  <Bookmark className={`w-3.5 h-3.5 ${deckCount > 0 ? 'fill-cyan-400 text-cyan-400' : ''}`} />
+                  <Bookmark className={`w-3.5 h-3.5 ${deckCount > 0 ? 'fill-red-500 text-red-500' : ''}`} />
                   <span className="hidden sm:inline">Deck</span>
                   {deckCount > 0 && (
-                    <span className="w-4 h-4 rounded-full bg-cyan-400 text-black font-mono text-[10px] font-black flex items-center justify-center">
+                    <span className="w-4 h-4 rounded-full bg-red-500 text-black font-mono text-[10px] font-black flex items-center justify-center">
                       {deckCount}
                     </span>
                   )}
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 sound.playClick();
                 onOpenRegister();
               }}
-              className="relative hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-orbitron text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400 hover:from-cyan-300 hover:to-yellow-300 transition-all duration-200 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_22px_rgba(0,240,255,0.6)] hover:scale-[1.02] active:scale-[0.98]"
+              className="relative hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-orbitron text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 hover:from-red-500 hover:to-amber-400 transition-all duration-200 shadow-[0_0_15px_rgba(255,23,68,0.45)] hover:shadow-[0_0_22px_rgba(255,23,68,0.65)] hover:scale-[1.02] active:scale-[0.98]"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Register</span>
@@ -170,7 +170,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 sound.playClick();
                 setMobileMenuOpen(!mobileMenuOpen);
               }}
-              className="lg:hidden p-2 rounded-lg bg-slate-900/80 border border-cyan-500/30 text-cyan-400 hover:text-white hover:bg-cyan-500/10 focus:outline-none"
+              className="lg:hidden p-2 rounded-lg bg-slate-950/90 border border-red-500/30 text-red-400 hover:text-white hover:bg-red-500/10 focus:outline-none"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -219,12 +219,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg font-orbitron text-xs tracking-wide transition-all ${
                     isActive
-                      ? 'bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-bold'
-                      : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
+                      ? 'bg-red-500/20 border border-red-500/40 text-red-300 font-bold'
+                      : 'text-slate-300 hover:bg-slate-900/80 hover:text-white'
                   }`}
                 >
                   <span>{item.label}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]" />}
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_#ff1744]" />}
                 </a>
               );
             })}
@@ -238,9 +238,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenDeck();
                 }}
-                className="w-full py-2.5 px-3 rounded-lg bg-slate-900 border border-cyan-500/40 text-cyan-300 font-rajdhani font-bold text-xs uppercase flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-3 rounded-lg bg-slate-950 border border-red-500/40 text-red-300 font-rajdhani font-bold text-xs uppercase flex items-center justify-center gap-2"
               >
-                <Bookmark className="w-4 h-4 fill-cyan-400 text-cyan-400" />
+                <Bookmark className="w-4 h-4 fill-red-500 text-red-500" />
                 <span>View My Shortlisted Deck ({deckCount})</span>
               </button>
             )}
@@ -251,7 +251,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setMobileMenuOpen(false);
                 onOpenRegister();
               }}
-              className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400 text-black font-orbitron font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.4)]"
+              className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 text-white font-orbitron font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,23,68,0.45)]"
             >
               <Sparkles className="w-4 h-4" />
               <span>Register Now</span>

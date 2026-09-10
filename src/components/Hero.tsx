@@ -86,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           {/* Main Title & Theme */}
           <div className="space-y-3">
             <h1 className="font-orbitron text-4xl sm:text-6xl xl:text-7xl font-black tracking-tight text-white uppercase leading-none">
-              MARTIN<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-purple-400">OVATION</span>
+              MARTIN<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-400">OVATION</span>
             </h1>
 
             <div className="flex items-center justify-center lg:justify-start gap-3">
@@ -107,15 +107,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
 
           {/* Geo-Location Tag & Live Countdown Dial */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-rajdhani font-semibold text-slate-300">
-            <div className="flex items-center gap-1.5 bg-slate-900/90 px-3.5 py-2 rounded-lg border border-slate-800">
-              <Calendar className="w-4 h-4 text-cyan-400" />
+            <div className="flex items-center gap-1.5 bg-slate-950/90 px-3.5 py-2 rounded-lg border border-slate-800">
+              <Calendar className="w-4 h-4 text-red-500" />
               <span>Oct 05 - 09, 2026</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-slate-900/90 px-3.5 py-2 rounded-lg border border-slate-800">
-              <MapPin className="w-4 h-4 text-purple-400" />
+            <div className="flex items-center gap-1.5 bg-slate-950/90 px-3.5 py-2 rounded-lg border border-slate-800">
+              <MapPin className="w-4 h-4 text-rose-400" />
               <span>Angara, Ranchi, Jharkhand</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-slate-900/90 px-3.5 py-2 rounded-lg border border-slate-800 text-yellow-400">
+            <div className="flex items-center gap-1.5 bg-slate-950/90 px-3.5 py-2 rounded-lg border border-slate-800 text-yellow-400">
               <Award className="w-4 h-4" />
               <span>₹2,50,000+ Prize Pool</span>
             </div>
@@ -128,36 +128,36 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
                 sound.playSuccess();
                 onOpenRegister();
               }}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400 hover:from-cyan-300 hover:to-yellow-300 text-black font-orbitron font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:shadow-[0_0_35px_rgba(0,240,255,0.65)] transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white font-orbitron font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(255,23,68,0.45)] hover:shadow-[0_0_35px_rgba(255,23,68,0.7)] transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <Sparkles className="w-4 h-4 text-black" />
+              <Sparkles className="w-4 h-4 text-white" />
               <span>Register Online</span>
-              <ArrowRight className="w-4 h-4 text-black" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </button>
 
             <button
               onClick={() => scrollToSection('events')}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-100 font-orbitron font-semibold text-xs sm:text-sm uppercase tracking-wider border border-cyan-500/40 hover:border-cyan-400 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-950/90 hover:bg-slate-900 text-slate-100 font-orbitron font-semibold text-xs sm:text-sm uppercase tracking-wider border border-red-500/40 hover:border-red-400 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
-              <Compass className="w-4 h-4 text-cyan-400" />
+              <Compass className="w-4 h-4 text-red-400" />
               <span>Explore Arenas</span>
             </button>
 
             <button
               onClick={() => scrollToSection('campus')}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800/80 text-slate-300 font-rajdhani font-semibold text-sm tracking-wider border border-slate-800 transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-950/60 hover:bg-slate-900/80 text-slate-300 font-rajdhani font-semibold text-sm tracking-wider border border-slate-800 transition-all flex items-center justify-center gap-2"
             >
-              <Navigation className="w-4 h-4 text-purple-400" />
+              <Navigation className="w-4 h-4 text-rose-400" />
               <span>Campus Radar</span>
             </button>
           </div>
 
           {/* Chrono Reactor Countdown Bar */}
           <div className="pt-2">
-            <div className="p-4 rounded-xl bg-slate-950/80 border border-cyan-500/30 backdrop-blur-md max-w-lg shadow-xl">
+            <div className="p-4 rounded-xl bg-slate-950/90 border border-red-500/30 backdrop-blur-md max-w-lg shadow-xl">
               <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800/80 text-xs font-rajdhani text-slate-400 uppercase tracking-widest">
-                <span className="flex items-center gap-1.5 text-cyan-300">
-                  <Zap className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="flex items-center gap-1.5 text-red-400">
+                  <Zap className="w-3.5 h-3.5 text-red-500" />
                   Live Chrono Synchronization
                 </span>
                 <span className="text-[11px] text-slate-400 font-mono">
@@ -167,19 +167,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
 
               <div className="grid grid-cols-4 gap-2 text-center">
                 <div className="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
-                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-cyan-300">
+                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-red-400">
                     {String(timeLeft.days).padStart(2, '0')}
                   </div>
                   <div className="text-[10px] sm:text-xs text-slate-400 uppercase font-rajdhani">Days</div>
                 </div>
                 <div className="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
-                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-cyan-300">
+                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-red-400">
                     {String(timeLeft.hours).padStart(2, '0')}
                   </div>
                   <div className="text-[10px] sm:text-xs text-slate-400 uppercase font-rajdhani">Hours</div>
                 </div>
                 <div className="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
-                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-cyan-300">
+                  <div className="font-orbitron font-extrabold text-xl sm:text-2xl text-red-400">
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </div>
                   <div className="text-[10px] sm:text-xs text-slate-400 uppercase font-rajdhani">Minutes</div>
@@ -203,9 +203,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
 
       {/* Festival Statistics Ribbon */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10 z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-slate-900/80 border border-cyan-500/20 backdrop-blur-xl shadow-2xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-slate-950/90 border border-red-500/20 backdrop-blur-xl shadow-2xl">
           <div className="text-center p-3 border-r border-slate-800 last:border-r-0 md:last:border-r-0">
-            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
+            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-300">
               5 Days
             </div>
             <div className="text-xs sm:text-sm font-semibold tracking-wider text-slate-400 uppercase font-rajdhani mt-1">
@@ -214,7 +214,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           </div>
 
           <div className="text-center p-3 border-r-0 md:border-r border-slate-800">
-            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
+            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-300">
               20+ Arenas
             </div>
             <div className="text-xs sm:text-sm font-semibold tracking-wider text-slate-400 uppercase font-rajdhani mt-1">
@@ -232,7 +232,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           </div>
 
           <div className="text-center p-3">
-            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400">
+            <div className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-rose-300">
               3,000+
             </div>
             <div className="text-xs sm:text-sm font-semibold tracking-wider text-slate-400 uppercase font-rajdhani mt-1">
@@ -245,7 +245,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
         <div className="flex justify-center mt-6">
           <button
             onClick={() => scrollToSection('about')}
-            className="flex flex-col items-center gap-1 text-slate-400 hover:text-cyan-400 transition-colors group focus:outline-none"
+            className="flex flex-col items-center gap-1 text-slate-400 hover:text-red-400 transition-colors group focus:outline-none"
             aria-label="Scroll down to About section"
           >
             <span className="text-[11px] font-rajdhani tracking-widest uppercase">Explore Odyssey</span>

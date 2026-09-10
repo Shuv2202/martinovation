@@ -23,17 +23,17 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
   };
 
   return (
-    <section id="team" className="relative py-24 sm:py-32 overflow-hidden">
+    <section id="team" className="relative py-24 sm:py-32 overflow-hidden bg-[#050508]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
-            <Users className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
+            <Users className="w-3.5 h-3.5 text-red-400" />
             <span>The Minds Behind The Fest</span>
           </div>
 
           <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Organizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Crew</span>
+            Organizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-400">Crew</span>
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter">
@@ -49,9 +49,9 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
               <button
                 key={cat.categoryName}
                 onClick={() => setActiveCategory(cat.categoryName)}
-                className={`px-4 py-2 rounded-xl font-orbitron text-xs font-semibold tracking-wider transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${
+                className={`px-4 py-2 rounded-xl font-orbitron text-xs font-semibold tracking-wider transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 ${
                   isActive
-                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400 shadow-[0_0_15px_rgba(0,240,255,0.3)]'
+                    ? 'bg-red-500/20 text-red-300 border border-red-500 shadow-[0_0_15px_rgba(255,23,68,0.3)]'
                     : 'bg-slate-900/70 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
                 }`}
               >
@@ -66,13 +66,13 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
           {currentCategoryData.members.map((member) => (
             <div
               key={member.id}
-              className="group relative p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] flex flex-col justify-between backdrop-blur-md"
+              className="group relative p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-red-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,23,68,0.15)] flex flex-col justify-between backdrop-blur-md"
             >
               <div className="flex items-start gap-4">
                 {/* Stylized Futuristic Avatar Placeholder */}
-                <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-900/40 via-purple-900/30 to-slate-950 border border-cyan-500/30 flex items-center justify-center shrink-0 overflow-hidden shadow-inner group-hover:scale-105 transition-transform">
+                <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-red-950/40 via-rose-900/30 to-slate-950 border border-red-500/30 flex items-center justify-center shrink-0 overflow-hidden shadow-inner group-hover:scale-105 transition-transform">
                   {/* Cyber monogram initials */}
-                  <span className="font-orbitron font-extrabold text-cyan-300 text-lg tracking-wider">
+                  <span className="font-orbitron font-extrabold text-red-300 text-lg tracking-wider">
                     {member.name
                       .split(' ')
                       .map((n) => n[0])
@@ -80,15 +80,15 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
                       .join('')}
                   </span>
                   {/* Subtle corner light */}
-                  <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                  <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
                 </div>
 
                 {/* Info */}
                 <div className="space-y-1 flex-1 min-w-0">
-                  <h3 className="font-orbitron text-lg font-bold text-white group-hover:text-cyan-300 transition-colors truncate">
+                  <h3 className="font-orbitron text-lg font-bold text-white group-hover:text-red-400 transition-colors truncate">
                     {member.name}
                   </h3>
-                  <div className="text-xs font-rajdhani font-bold text-yellow-400 uppercase tracking-wide">
+                  <div className="text-xs font-rajdhani font-bold text-amber-400 uppercase tracking-wide">
                     {member.role}
                   </div>
                   <p className="text-xs text-slate-400 font-inter truncate">
@@ -100,7 +100,7 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
               {/* Action Buttons */}
               <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <span className="text-[11px] font-rajdhani text-slate-400 flex items-center gap-1">
-                  <UserCheck className="w-3.5 h-3.5 text-cyan-400" />
+                  <UserCheck className="w-3.5 h-3.5 text-red-400" />
                   <span>UMU Representative</span>
                 </span>
 
@@ -119,7 +119,7 @@ export const Team: React.FC<TeamProps> = ({ onShowToast }) => {
 
                   <button
                     onClick={() => handleContactClick(member)}
-                    className="py-1.5 px-3 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 text-xs font-orbitron font-semibold uppercase tracking-wider flex items-center gap-1.5 transition-colors focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                    className="py-1.5 px-3 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-300 border border-red-500/30 hover:border-red-400 text-xs font-orbitron font-semibold uppercase tracking-wider flex items-center gap-1.5 transition-colors focus:outline-none focus:ring-1 focus:ring-red-500"
                     aria-label={`Contact ${member.name}`}
                   >
                     <Mail className="w-3.5 h-3.5" />

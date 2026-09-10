@@ -75,21 +75,21 @@ export const Events: React.FC<EventsProps> = ({
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="events" className="relative py-24 sm:py-32 overflow-hidden bg-[#050811]">
+    <section id="events" className="relative py-24 sm:py-32 overflow-hidden bg-[#050508]">
       {/* Background Lighting */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
-            <Compass className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950 border border-red-500/30 text-red-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
+            <Compass className="w-3.5 h-3.5 text-red-400" />
             <span>20+ Proving Grounds</span>
           </div>
 
           <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Choose Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400">Arena</span>
+            Choose Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-yellow-400">Arena</span>
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter">
@@ -128,7 +128,7 @@ export const Events: React.FC<EventsProps> = ({
 
         {/* View Mode 2: Terminal Matrix Table */}
         {viewMode === 'table' && filteredEvents.length > 0 && (
-          <div className="rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden backdrop-blur-xl shadow-xl">
+          <div className="rounded-2xl bg-slate-950/90 border border-slate-800 overflow-hidden backdrop-blur-xl shadow-xl">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-inter">
                 <thead className="bg-slate-950 border-b border-slate-800 text-[11px] font-orbitron font-bold text-slate-400 uppercase tracking-wider">
@@ -145,9 +145,9 @@ export const Events: React.FC<EventsProps> = ({
                   {filteredEvents.map((event) => {
                     const isBookmarked = bookmarkedIds.includes(event.id);
                     return (
-                      <tr key={event.id} className="hover:bg-slate-800/40 transition-colors group">
+                      <tr key={event.id} className="hover:bg-slate-900/60 transition-colors group">
                         <td className="py-4 px-4">
-                          <div className="font-orbitron font-bold text-sm text-white group-hover:text-cyan-300 flex items-center gap-2">
+                          <div className="font-orbitron font-bold text-sm text-white group-hover:text-red-300 flex items-center gap-2">
                             <span>{event.name}</span>
                             {event.featured && (
                               <span className="text-[9px] px-1.5 py-0.2 rounded font-mono bg-yellow-400/20 text-yellow-300 border border-yellow-400/40">
@@ -161,7 +161,7 @@ export const Events: React.FC<EventsProps> = ({
                         </td>
 
                         <td className="py-4 px-4">
-                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-cyan-300 border border-cyan-500/20">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-900 text-red-300 border border-red-500/20">
                             {event.category}
                           </span>
                         </td>

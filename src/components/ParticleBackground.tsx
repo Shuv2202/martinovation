@@ -32,7 +32,7 @@ export const ParticleBackground: React.FC = () => {
       alpha: number;
     }> = [];
 
-    const colors = ['#00f0ff', '#8b5cf6', '#38bdf8', '#fbbf24'];
+    const colors = ['#ff1744', '#ef4444', '#dc2626', '#fbbf24'];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -67,7 +67,7 @@ export const ParticleBackground: React.FC = () => {
       ctx.clearRect(0, 0, width, height);
 
       // Draw subtle cyber grid lines
-      ctx.strokeStyle = 'rgba(0, 240, 255, 0.025)';
+      ctx.strokeStyle = 'rgba(255, 23, 68, 0.03)';
       ctx.lineWidth = 1;
       const gridSize = 64;
       for (let x = 0; x < width; x += gridSize) {
@@ -119,8 +119,8 @@ export const ParticleBackground: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = '#00f0ff';
-            ctx.globalAlpha = (1 - dist2 / 95) * 0.12;
+            ctx.strokeStyle = '#ff1744';
+            ctx.globalAlpha = (1 - dist2 / 95) * 0.14;
             ctx.stroke();
           }
         }

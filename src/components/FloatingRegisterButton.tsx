@@ -41,7 +41,7 @@ export const FloatingRegisterButton: React.FC<FloatingRegisterButtonProps> = ({
     <div className="fixed bottom-5 right-4 z-40 sm:hidden animate-fade-in">
       <button
         onClick={onOpenRegister}
-        className="px-5 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-yellow-400 text-black font-orbitron font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.6)] active:scale-95 transition-transform"
+        className="px-5 py-3 rounded-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 text-white font-orbitron font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(255,23,68,0.6)] active:scale-95 transition-transform"
         aria-label="Register for Martinovation 2026"
       >
         <Sparkles className="w-4 h-4 animate-spin-slow" />

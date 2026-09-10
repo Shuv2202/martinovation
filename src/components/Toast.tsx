@@ -20,14 +20,14 @@ export const Toast: React.FC<ToastProps> = ({ toasts, onDismiss }) => {
             case 'error':
               return <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />;
             default:
-              return <Info className="w-5 h-5 text-cyan-400 shrink-0" />;
+              return <Info className="w-5 h-5 text-red-400 shrink-0" />;
           }
         };
 
         return (
           <div
             key={toast.id}
-            className="pointer-events-auto p-4 rounded-xl bg-slate-900/95 border border-cyan-500/40 shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl flex items-start gap-3 animate-slide-up transition-all"
+            className="pointer-events-auto p-4 rounded-xl bg-slate-900/95 border border-red-500/40 shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl flex items-start gap-3 animate-slide-up transition-all"
             role="alert"
           >
             {getIcon()}

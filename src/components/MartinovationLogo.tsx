@@ -33,12 +33,12 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
       aria-label="Martinovation Official Insignia"
     >
       <defs>
-        {/* Cyan to Cobalt Blue Linear Gradient for Chevron Blades */}
+        {/* Red to Dark Crimson Linear Gradient for Chevron Blades */}
         <linearGradient id="logoCyanBlueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#00f0ff" />
-          <stop offset="30%" stopColor="#38bdf8" />
-          <stop offset="65%" stopColor="#0284c7" />
-          <stop offset="100%" stopColor="#1e40af" />
+          <stop offset="0%" stopColor="#ff1744" />
+          <stop offset="30%" stopColor="#ef4444" />
+          <stop offset="65%" stopColor="#dc2626" />
+          <stop offset="100%" stopColor="#991b1b" />
         </linearGradient>
 
         {/* Dark Metallic Chrome Gradient for Chassis & Traces */}
@@ -64,10 +64,10 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
           <stop offset="100%" stopColor="#020617" />
         </linearGradient>
 
-        {/* Glowing Torus Orange to Yellow Gradient */}
+        {/* Glowing Torus Orange to Crimson Gradient */}
         <linearGradient id="logoTorusGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#ea580c" />
-          <stop offset="30%" stopColor="#f97316" />
+          <stop offset="0%" stopColor="#dc2626" />
+          <stop offset="30%" stopColor="#ef4444" />
           <stop offset="70%" stopColor="#f59e0b" />
           <stop offset="100%" stopColor="#fde047" />
         </linearGradient>
@@ -76,8 +76,8 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
         <radialGradient id="logoTorusInnerGlow" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#fef08a" stopOpacity="1" />
           <stop offset="40%" stopColor="#f59e0b" stopOpacity="0.9" />
-          <stop offset="80%" stopColor="#ea580c" stopOpacity="0.8" />
-          <stop offset="100%" stopColor="#9a3412" stopOpacity="0" />
+          <stop offset="80%" stopColor="#dc2626" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#7f1d1d" stopOpacity="0" />
         </radialGradient>
 
         {/* Terminal Sphere 3D Gradient */}
@@ -294,7 +294,7 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
         <polygon
           points="167,185 148,195 148,310 182,310 193,278 167,273"
           fill="url(#logoCyanBlueGrad)"
-          stroke="#00f0ff"
+          stroke="#ff1744"
           strokeWidth="2"
           strokeLinejoin="round"
           filter="url(#logoCoreGlow)"
@@ -312,7 +312,7 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
         <polygon
           points="333,185 352,195 352,310 318,310 307,278 333,273"
           fill="url(#logoCyanBlueGrad)"
-          stroke="#00f0ff"
+          stroke="#ff1744"
           strokeWidth="2"
           strokeLinejoin="round"
           filter="url(#logoCoreGlow)"
@@ -354,7 +354,7 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
             146,148
           "
           fill="url(#logoCyanBlueGrad)"
-          stroke="#00f0ff"
+          stroke="#ff1744"
           strokeWidth="2.5"
           strokeLinejoin="round"
           filter="url(#logoCoreGlow)"
@@ -387,7 +387,7 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
         <polyline
           points="178,175 250,245 322,175"
           fill="none"
-          stroke="#38bdf8"
+          stroke="#ff4d4d"
           strokeWidth="2"
           opacity="0.9"
         />
@@ -402,26 +402,26 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
     return (
       <div className={`relative flex items-center justify-center ${className}`}>
         {/* Outer Pulsing Glow */}
-        <div className="absolute inset-0 rounded-full bg-cyan-500/15 blur-3xl animate-pulse-glow pointer-events-none" />
+        <div className="absolute inset-0 rounded-full bg-red-500/15 blur-3xl animate-pulse-glow pointer-events-none" />
 
         {/* HUD Ring 1 - Outermost dashed */}
-        <div className="absolute w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full border border-cyan-500/20 border-dashed animate-spin-slow pointer-events-none" />
+        <div className="absolute w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] rounded-full border border-red-500/25 border-dashed animate-spin-slow pointer-events-none" />
 
         {/* HUD Ring 2 - Counter-rotating with tick marks */}
-        <div className="absolute w-[270px] h-[270px] sm:w-[320px] sm:h-[320px] rounded-full border border-purple-500/30 border-t-cyan-400 border-b-yellow-400 animate-spin-reverse-slow pointer-events-none">
-          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]" />
+        <div className="absolute w-[270px] h-[270px] sm:w-[320px] sm:h-[320px] rounded-full border border-rose-500/30 border-t-red-500 border-b-yellow-400 animate-spin-reverse-slow pointer-events-none">
+          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_#ff1744]" />
           <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-400 shadow-[0_0_8px_#fbbf24]" />
         </div>
 
         {/* Central Core Container */}
-        <div className="relative w-[230px] h-[230px] sm:w-[270px] sm:h-[270px] rounded-full bg-slate-950/85 border border-cyan-500/40 p-5 flex flex-col items-center justify-center backdrop-blur-md shadow-[0_0_40px_rgba(0,240,255,0.3)] group hover:shadow-[0_0_60px_rgba(0,240,255,0.5)] transition-all duration-500">
+        <div className="relative w-[230px] h-[230px] sm:w-[270px] sm:h-[270px] rounded-full bg-slate-950/90 border border-red-500/40 p-5 flex flex-col items-center justify-center backdrop-blur-md shadow-[0_0_40px_rgba(255,23,68,0.35)] group hover:shadow-[0_0_60px_rgba(255,23,68,0.55)] transition-all duration-500">
           {/* Emblem Graphic */}
           <div className="w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center">
             {renderEmblem('100%', '100%')}
           </div>
 
           {/* Monogram / Sub-label */}
-          <span className="mt-2 font-orbitron font-extrabold tracking-[0.25em] text-cyan-300 text-xs sm:text-sm">
+          <span className="mt-2 font-orbitron font-extrabold tracking-[0.25em] text-red-400 text-xs sm:text-sm">
             MARTINOVATION
           </span>
           <span className="text-[10px] text-yellow-400/90 tracking-wider uppercase font-rajdhani font-semibold">
@@ -436,7 +436,7 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
   return (
     <div className={`flex items-center gap-3 select-none group ${className}`}>
       <div
-        className="relative flex items-center justify-center rounded-xl bg-slate-900/90 border border-cyan-500/40 p-1 shadow-[0_0_15px_rgba(0,240,255,0.25)] transition-all duration-300 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,240,255,0.45)]"
+        className="relative flex items-center justify-center rounded-xl bg-slate-950/90 border border-red-500/40 p-1 shadow-[0_0_15px_rgba(255,23,68,0.25)] transition-all duration-300 group-hover:border-red-400 group-hover:shadow-[0_0_25px_rgba(255,23,68,0.45)]"
         style={{ width: current.icon, height: current.icon }}
       >
         {renderEmblem('100%', '100%')}
@@ -446,9 +446,9 @@ export const MartinovationLogo: React.FC<LogoProps> = ({
         <div className="flex flex-col text-left">
           <div className="flex items-center gap-1.5">
             <span className={`font-orbitron font-extrabold tracking-wider text-white ${current.text}`}>
-              MARTIN<span className="text-cyan-400">OVATION</span>
+              MARTIN<span className="text-red-500">OVATION</span>
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
           </div>
           <span className={`font-rajdhani font-semibold tracking-widest text-slate-400 uppercase ${current.sub}`}>
             Usha Martin University

@@ -137,7 +137,7 @@ export default function App() {
   const bookmarkedEvents = EVENTS_DATA.filter((e) => bookmarkedIds.includes(e.id));
 
   return (
-    <div className="relative min-h-screen bg-[#050811] text-slate-100 font-inter antialiased overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="relative min-h-screen bg-[#050508] text-slate-100 font-inter antialiased overflow-x-hidden selection:bg-red-500/30 selection:text-red-200">
       {/* Loading Screen */}
       {isLoading && (
         <LoadingScreen onFinish={() => setIsLoading(false)} />

@@ -8,12 +8,12 @@ interface NotFoundProps {
 
 export const NotFound: React.FC<NotFoundProps> = ({ onReturnHome }) => {
   return (
-    <div className="min-h-screen bg-[#050811] text-white flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+    <div className="min-h-screen bg-[#050508] text-white flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
       {/* Cyber Grid */}
       <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none" />
 
       {/* Glowing Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/15 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="relative z-10 max-w-md space-y-6">
         <MartinovationLogo size="md" showText={false} className="mx-auto" />
@@ -24,7 +24,7 @@ export const NotFound: React.FC<NotFoundProps> = ({ onReturnHome }) => {
             <span>404 // Arena Not Found</span>
           </div>
 
-          <h1 className="font-orbitron text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400">
+          <h1 className="font-orbitron text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-400">
             404
           </h1>
 
@@ -39,7 +39,7 @@ export const NotFound: React.FC<NotFoundProps> = ({ onReturnHome }) => {
 
         <button
           onClick={onReturnHome}
-          className="py-3 px-6 rounded-xl bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 text-black font-orbitron font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all"
+          className="py-3 px-6 rounded-xl bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 hover:brightness-110 text-white font-orbitron font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 shadow-[0_0_20px_rgba(255,23,68,0.4)] transition-all"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Fest HQ</span>

@@ -190,7 +190,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
           particleCount: 120,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#00f0ff', '#8b5cf6', '#fbbf24', '#ffffff']
+          colors: ['#ff1744', '#dc2626', '#ef4444', '#f59e0b', '#ffffff']
         });
       } catch {
         // Fallback gracefully if canvas-confetti is unsupported
@@ -222,20 +222,20 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
   };
 
   return (
-    <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-slate-950/80">
+    <section id="register" className="relative py-24 sm:py-32 overflow-hidden bg-[#050508]">
       {/* Background Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs sm:text-sm font-semibold tracking-wider font-rajdhani uppercase">
+            <Sparkles className="w-3.5 h-3.5 text-red-400" />
             <span>Portal Open</span>
           </div>
 
           <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Ready to Turn Your Idea <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400">Into Impact?</span>
+            Ready to Turn Your Idea <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-400">Into Impact?</span>
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter max-w-2xl mx-auto">
@@ -249,7 +249,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
               Registration Status: Active (Early Bird Slots)
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-yellow-400" />
+              <Clock className="w-3.5 h-3.5 text-amber-400" />
               Deadline: 48 Hours Before Festival Inauguration
             </span>
           </div>
@@ -257,20 +257,20 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
         {/* Success Confirmation Card */}
         {isSuccess ? (
-          <div className="p-8 sm:p-10 rounded-2xl bg-slate-900/90 border border-cyan-500/50 shadow-[0_0_50px_rgba(0,240,255,0.25)] text-center space-y-6 backdrop-blur-xl animate-fade-in">
-            <div className="w-16 h-16 rounded-2xl bg-cyan-500/20 border border-cyan-400 text-cyan-300 flex items-center justify-center mx-auto shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+          <div className="p-8 sm:p-10 rounded-2xl bg-slate-900/90 border border-red-500/50 shadow-[0_0_50px_rgba(255,23,68,0.25)] text-center space-y-6 backdrop-blur-xl animate-fade-in">
+            <div className="w-16 h-16 rounded-2xl bg-red-500/20 border border-red-400 text-red-300 flex items-center justify-center mx-auto shadow-[0_0_20px_rgba(255,23,68,0.4)]">
               <CheckCircle2 className="w-9 h-9" />
             </div>
 
             <div className="space-y-2">
-              <span className="text-xs font-orbitron font-bold text-yellow-400 uppercase tracking-widest">
+              <span className="text-xs font-orbitron font-bold text-amber-400 uppercase tracking-widest">
                 Registration Confirmed
               </span>
               <h3 className="font-orbitron text-xl sm:text-2xl font-black text-white">
                 Where Innovation Knows No Boundaries!
               </h3>
               <p className="text-slate-300 text-sm font-inter max-w-md mx-auto">
-                Thank you, <strong className="text-white">{formData.participantName}</strong>. Your entry for <strong className="text-cyan-300">{selectedEvent?.name}</strong> has been logged.
+                Thank you, <strong className="text-white">{formData.participantName}</strong>. Your entry for <strong className="text-red-300">{selectedEvent?.name}</strong> has been logged.
               </p>
             </div>
 
@@ -278,7 +278,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
             <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 max-w-md mx-auto space-y-2 font-mono text-left text-xs">
               <div className="flex justify-between border-b border-slate-800/80 pb-2">
                 <span className="text-slate-400">REFERENCE ID:</span>
-                <span className="text-cyan-300 font-bold">{registrationRef}</span>
+                <span className="text-red-400 font-bold">{registrationRef}</span>
               </div>
               <div className="flex justify-between border-b border-slate-800/80 pb-2">
                 <span className="text-slate-400">INSTITUTION:</span>
@@ -301,7 +301,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <button
                 onClick={handlePrintSlip}
-                className="w-full sm:w-auto py-3 px-6 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/50 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                className="w-full sm:w-auto py-3 px-6 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/50 font-orbitron text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
               >
                 <Download className="w-4 h-4" />
                 <span>Print / Save Slip</span>
@@ -325,7 +325,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
           >
             {/* Step 1: Type Selection (Individual vs Team) */}
             <div className="space-y-3">
-              <label className="block text-xs font-orbitron font-bold text-cyan-400 uppercase tracking-wider">
+              <label className="block text-xs font-orbitron font-bold text-red-400 uppercase tracking-wider">
                 Registration Type
               </label>
               <div className="grid grid-cols-2 gap-3">
@@ -334,7 +334,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   onClick={() => setFormData((p) => ({ ...p, isTeam: false }))}
                   className={`p-3.5 rounded-xl border flex items-center justify-center gap-2 font-orbitron text-xs sm:text-sm font-semibold tracking-wider transition-all ${
                     !formData.isTeam
-                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.3)]'
+                      ? 'bg-red-500/20 border-red-500 text-red-300 shadow-[0_0_15px_rgba(255,23,68,0.3)]'
                       : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -347,7 +347,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   onClick={() => setFormData((p) => ({ ...p, isTeam: true }))}
                   className={`p-3.5 rounded-xl border flex items-center justify-center gap-2 font-orbitron text-xs sm:text-sm font-semibold tracking-wider transition-all ${
                     formData.isTeam
-                      ? 'bg-purple-500/20 border-purple-400 text-purple-300 shadow-[0_0_15px_rgba(139,92,246,0.3)]'
+                      ? 'bg-rose-500/20 border-rose-500 text-rose-300 shadow-[0_0_15px_rgba(225,29,72,0.3)]'
                       : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -359,7 +359,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
             {/* Step 2: Event Dropdown */}
             <div className="space-y-2">
-              <label htmlFor="eventId" className="block text-xs font-orbitron font-bold text-cyan-400 uppercase tracking-wider">
+              <label htmlFor="eventId" className="block text-xs font-orbitron font-bold text-red-400 uppercase tracking-wider">
                 Select Arena Event *
               </label>
               <select
@@ -367,7 +367,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                 name="eventId"
                 value={formData.eventId}
                 onChange={handleEventChange}
-                className="w-full py-3 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm font-inter focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors"
+                className="w-full py-3 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm font-inter focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors"
               >
                 {EVENTS_DATA.map((evt) => (
                   <option key={evt.id} value={evt.id} className="bg-slate-900 text-white">
@@ -379,9 +379,9 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
               {selectedEvent && (
                 <div className="p-3 rounded-lg bg-slate-950/70 border border-slate-800/80 text-xs font-rajdhani text-slate-300 flex items-center justify-between">
                   <span>
-                    Venue: <strong>{selectedEvent.venue}</strong> | Prize: <strong className="text-yellow-400">{selectedEvent.prizePool}</strong>
+                    Venue: <strong>{selectedEvent.venue}</strong> | Prize: <strong className="text-amber-400">{selectedEvent.prizePool}</strong>
                   </span>
-                  <span className="text-cyan-400 uppercase font-semibold">{selectedEvent.teamSize}</span>
+                  <span className="text-red-400 uppercase font-semibold">{selectedEvent.teamSize}</span>
                 </div>
               )}
             </div>
@@ -389,7 +389,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
             {/* Step 3: Team Name (if Team selected) */}
             {formData.isTeam && (
               <div className="space-y-2 animate-fade-in">
-                <label htmlFor="teamName" className="block text-xs font-orbitron font-bold text-purple-400 uppercase tracking-wider">
+                <label htmlFor="teamName" className="block text-xs font-orbitron font-bold text-rose-400 uppercase tracking-wider">
                   Team / Squad Name *
                 </label>
                 <input
@@ -399,7 +399,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   value={formData.teamName || ''}
                   onChange={handleInputChange}
                   placeholder="e.g. CyberKnights UMU, QuantumBots"
-                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 transition-colors ${
+                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 transition-colors ${
                     errors.teamName ? 'border-red-500' : 'border-slate-800'
                   }`}
                 />
@@ -426,7 +426,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   value={formData.participantName}
                   onChange={handleInputChange}
                   placeholder="e.g. Amit Kumar Singh"
-                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors ${
+                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${
                     errors.participantName ? 'border-red-500' : 'border-slate-800'
                   }`}
                 />
@@ -450,7 +450,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   value={formData.collegeName}
                   onChange={handleInputChange}
                   placeholder="e.g. Usha Martin University"
-                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors ${
+                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${
                     errors.collegeName ? 'border-red-500' : 'border-slate-800'
                   }`}
                 />
@@ -474,7 +474,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="e.g. student@umu.ac.in"
-                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors ${
+                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${
                     errors.email ? 'border-red-500' : 'border-slate-800'
                   }`}
                 />
@@ -499,7 +499,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   onChange={handleInputChange}
                   placeholder="10-digit mobile number"
                   maxLength={14}
-                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-colors ${
+                  className={`w-full py-3 px-4 rounded-xl bg-slate-950 border text-[#fff] text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${
                     errors.phone ? 'border-red-500' : 'border-slate-800'
                   }`}
                 />
@@ -516,13 +516,13 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
             {formData.isTeam && (
               <div className="space-y-3 pt-2 border-t border-slate-800 animate-fade-in">
                 <div className="flex items-center justify-between">
-                  <label className="block text-xs font-orbitron font-bold text-cyan-400 uppercase tracking-wider">
+                  <label className="block text-xs font-orbitron font-bold text-red-400 uppercase tracking-wider">
                     Additional Team Members
                   </label>
                   <button
                     type="button"
                     onClick={handleAddTeamMember}
-                    className="text-xs text-cyan-300 hover:text-cyan-200 flex items-center gap-1 font-rajdhani font-semibold focus:outline-none"
+                    className="text-xs text-red-400 hover:text-red-300 flex items-center gap-1 font-rajdhani font-semibold focus:outline-none"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     <span>Add Member</span>
@@ -537,7 +537,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                         value={member}
                         onChange={(e) => handleTeamMemberChange(index, e.target.value)}
                         placeholder={`Member ${index + 2} Name & Email/Phone (Optional)`}
-                        className="flex-1 py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                        className="flex-1 py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:ring-1 focus:ring-red-500"
                       />
                       {formData.teamMembers.length > 1 && (
                         <button
@@ -563,7 +563,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
                   name="agreedToTerms"
                   checked={formData.agreedToTerms}
                   onChange={handleInputChange}
-                  className="mt-1 w-4 h-4 rounded border-slate-700 bg-slate-950 text-cyan-400 focus:ring-cyan-400 focus:ring-offset-slate-950"
+                  className="mt-1 w-4 h-4 rounded border-slate-700 bg-slate-950 text-red-500 focus:ring-red-500 focus:ring-offset-slate-950"
                 />
                 <span className="text-xs text-slate-300 font-inter leading-relaxed">
                   I agree to adhere to the official Martinovation 2026 rules, academic integrity guidelines, and the Usha Martin University campus code of conduct.
@@ -582,7 +582,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400 hover:from-cyan-300 hover:to-yellow-300 disabled:opacity-50 text-black font-orbitron font-extrabold text-sm uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:shadow-[0_0_35px_rgba(0,240,255,0.6)] transition-all"
+                className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 hover:from-red-500 hover:to-amber-400 disabled:opacity-50 text-white font-orbitron font-extrabold text-sm uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(255,23,68,0.4)] hover:shadow-[0_0_35px_rgba(255,23,68,0.6)] transition-all"
               >
                 {isSubmitting ? (
                   <>
@@ -598,7 +598,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
               </button>
 
               <div className="flex items-center justify-center gap-2 text-xs font-rajdhani text-slate-400 text-center mt-3">
-                <ShieldCheck className="w-4 h-4 text-cyan-400" />
+                <ShieldCheck className="w-4 h-4 text-red-400" />
                 <span>Instant Confirmation Reference • No Payment Required for Free Events</span>
               </div>
             </div>

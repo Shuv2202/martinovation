@@ -47,13 +47,13 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
       />
 
       {/* Drawer */}
-      <div className="relative w-full max-w-md bg-[#070b16] border-l border-cyan-500/30 p-6 flex flex-col justify-between shadow-2xl z-10 overflow-y-auto">
+      <div className="relative w-full max-w-md bg-[#060408] border-l border-red-500/30 p-6 flex flex-col justify-between shadow-2xl z-10 overflow-y-auto">
         {/* Drawer Header */}
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-400/40 text-cyan-400 flex items-center justify-center">
-                <Bookmark className="w-4 h-4 fill-cyan-400 text-cyan-400" />
+              <div className="w-8 h-8 rounded-lg bg-red-500/20 border border-red-400/40 text-red-400 flex items-center justify-center">
+                <Bookmark className="w-4 h-4 fill-red-400 text-red-400" />
               </div>
               <div>
                 <h3 className="font-orbitron font-bold text-base text-white">
@@ -82,11 +82,11 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
               {bookmarkedEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="p-4 rounded-xl bg-slate-900/80 border border-slate-800/80 space-y-2 relative group hover:border-cyan-500/40 transition-all"
+                  className="p-4 rounded-xl bg-slate-900/80 border border-slate-800/80 space-y-2 relative group hover:border-red-500/40 transition-all"
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-red-500/10 text-red-300 border border-red-500/30">
                         {event.category}
                       </span>
                       <h4 className="font-orbitron font-bold text-sm text-white mt-1">
@@ -107,10 +107,10 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
 
                   <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-400 font-inter pt-1">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3 text-cyan-400" />
+                      <Calendar className="w-3 h-3 text-red-400" />
                       {event.dateTime.split(',')[0]}
                     </span>
-                    <span className="flex items-center gap-1 text-yellow-400 font-semibold">
+                    <span className="flex items-center gap-1 text-amber-400 font-semibold">
                       <Trophy className="w-3 h-3" />
                       {event.prizePool.split('+')[0]}
                     </span>
@@ -122,7 +122,7 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
                       onClose();
                       onRegister(event.id);
                     }}
-                    className="w-full mt-2 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-300 font-orbitron text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 transition-colors"
+                    className="w-full mt-2 py-1.5 rounded-lg bg-red-500/20 hover:bg-red-500/30 border border-red-500/40 text-red-300 font-orbitron text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 transition-colors"
                   >
                     <span>Register For This</span>
                     <ArrowRight className="w-3 h-3" />
@@ -132,7 +132,7 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
             </div>
           ) : (
             <div className="text-center py-12 px-4 rounded-xl bg-slate-900/40 border border-slate-800/60 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 flex items-center justify-center mx-auto">
                 <Bookmark className="w-5 h-5" />
               </div>
               <div className="space-y-1">
@@ -154,7 +154,7 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
                 onClose();
                 onRegister();
               }}
-              className="w-full py-3 rounded-lg bg-gradient-to-r from-cyan-400 via-cyan-300 to-yellow-400 text-black font-orbitron font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:brightness-110 active:scale-95 transition-all"
+              className="w-full py-3 rounded-lg bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 text-white font-orbitron font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,23,68,0.4)] hover:brightness-110 active:scale-95 transition-all"
             >
               <Sparkles className="w-4 h-4" />
               <span>Register All Shortlisted</span>
@@ -165,7 +165,7 @@ export const MyDeckDrawer: React.FC<MyDeckDrawerProps> = ({
                 onClick={handlePrint}
                 className="flex-1 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-rajdhani font-semibold flex items-center justify-center gap-1.5 transition-colors"
               >
-                <Printer className="w-3.5 h-3.5 text-cyan-400" />
+                <Printer className="w-3.5 h-3.5 text-red-400" />
                 <span>Print Schedule</span>
               </button>
               <button

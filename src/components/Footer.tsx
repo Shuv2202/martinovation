@@ -28,9 +28,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
   };
 
   return (
-    <footer className="relative bg-[#04060d] border-t border-slate-800/80 pt-16 pb-12 overflow-hidden">
+    <footer className="relative bg-[#040407] border-t border-slate-800/80 pt-16 pb-12 overflow-hidden">
       {/* Top Cyber Accent Strip */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         {/* Main Footer Content Grid */}
@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
             <p className="text-slate-400 text-sm font-inter leading-relaxed max-w-sm">
               The premier annual techno-cultural festival of <strong>Usha Martin University</strong>. Fostering bold engineering minds, creative visionaries, and impactful solutions — where innovation knows no boundaries.
             </p>
-            <div className="flex items-center gap-2 text-xs font-rajdhani text-cyan-400 font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-xs font-rajdhani text-red-400 font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Where Ideas Become Impact</span>
             </div>
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
 
           {/* Col 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-cyan-300">
+            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-red-400">
               Quick Links
             </h4>
             <ul className="space-y-2 text-sm font-inter">
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
                 <li key={id}>
                   <button
                     onClick={() => handleNav(`#${id}`)}
-                    className="text-slate-400 hover:text-cyan-300 capitalize transition-colors text-left"
+                    className="text-slate-400 hover:text-red-400 capitalize transition-colors text-left"
                   >
                     {id}
                   </button>
@@ -70,14 +70,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
 
           {/* Col 3: Key Arenas (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-purple-300">
+            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-rose-400">
               Featured Arenas
             </h4>
             <ul className="space-y-2 text-sm font-inter">
               <li>
                 <button
                   onClick={() => handleNav('#events')}
-                  className="text-slate-400 hover:text-purple-300 transition-colors text-left"
+                  className="text-slate-400 hover:text-rose-300 transition-colors text-left"
                 >
                   HackGenesis 36H Hackathon
                 </button>
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
               <li>
                 <button
                   onClick={() => handleNav('#events')}
-                  className="text-slate-400 hover:text-purple-300 transition-colors text-left"
+                  className="text-slate-400 hover:text-rose-300 transition-colors text-left"
                 >
                   RoboWars Cyber Clash
                 </button>
@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
               <li>
                 <button
                   onClick={() => handleNav('#events')}
-                  className="text-slate-400 hover:text-purple-300 transition-colors text-left"
+                  className="text-slate-400 hover:text-rose-300 transition-colors text-left"
                 >
                   Algolympics Speed Marathon
                 </button>
@@ -101,7 +101,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
               <li>
                 <button
                   onClick={() => handleNav('#events')}
-                  className="text-slate-400 hover:text-purple-300 transition-colors text-left"
+                  className="text-slate-400 hover:text-rose-300 transition-colors text-left"
                 >
                   Nexus Esports Championship
                 </button>
@@ -109,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
               <li>
                 <button
                   onClick={() => handleNav('#events')}
-                  className="text-slate-400 hover:text-purple-300 transition-colors text-left"
+                  className="text-slate-400 hover:text-rose-300 transition-colors text-left"
                 >
                   National Innovation Expo
                 </button>
@@ -119,13 +119,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
 
           {/* Col 4: Campus & Socials (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-yellow-300">
+            <h4 className="font-orbitron text-xs font-bold uppercase tracking-widest text-amber-400">
               Campus Location
             </h4>
             <div className="space-y-2 text-xs font-inter text-slate-400 leading-relaxed">
               <p className="text-white font-medium">Usha Martin University</p>
               <p>Narayansoso, Angara, Ranchi, Jharkhand 835103</p>
-              <p className="text-cyan-300">martinovation@umu.ac.in</p>
+              <p className="text-red-400">martinovation@umu.ac.in</p>
             </div>
 
             {/* Social Icons */}
@@ -134,7 +134,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
                 href="https://instagram.com/ushamartinuniv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-pink-400 hover:border-pink-500/40 transition-colors"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-rose-400 hover:border-rose-500/40 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
                 href="https://linkedin.com/school/usha-martin-university"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-red-400 hover:border-red-500/40 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-red-400 hover:border-red-500/40 transition-colors"
                 aria-label="Twitter / X"
               >
                 <Twitter className="w-4 h-4" />
@@ -183,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => onOpenRegister()}
-              className="text-cyan-400 hover:text-cyan-300 font-orbitron font-bold uppercase tracking-wider text-[11px]"
+              className="text-red-400 hover:text-red-300 font-orbitron font-bold uppercase tracking-wider text-[11px]"
             >
               Register for Fest
             </button>
@@ -191,7 +191,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
             {/* Back to Top Button */}
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-cyan-300 transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-red-400 transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-red-500"
               aria-label="Back to Top"
             >
               <ArrowUp className="w-4 h-4" />
