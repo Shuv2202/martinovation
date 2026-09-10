@@ -1,0 +1,6 @@
+{
+  "name": "Martinovation - Genesis of Tomorrow",
+  "description": "Official website for Martinovation, the premier annual techno-cultural festival of Usha Martin University, Ranchi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
