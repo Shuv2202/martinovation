@@ -91,8 +91,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
 
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <span className="h-[2px] w-6 sm:w-10 bg-gradient-to-r from-transparent to-yellow-400 hidden sm:inline-block" />
-              <p className="font-orbitron font-extrabold text-sm sm:text-lg tracking-[0.25em] text-yellow-400 uppercase drop-shadow">
-                GENESIS OF TOMORROW
+              <p className="font-orbitron font-extrabold text-xs sm:text-base tracking-[0.2em] text-yellow-400 uppercase drop-shadow">
+                WHERE INNOVATION KNOWS NO BOUNDARIES
               </p>
               <span className="h-[2px] w-6 sm:w-10 bg-gradient-to-r from-yellow-400 to-transparent hidden sm:inline-block" />
             </div>

@@ -46,7 +46,7 @@ export const NotFound: React.FC<NotFoundProps> = ({ onReturnHome }) => {
         </button>
 
         <div className="text-xs text-slate-400 font-rajdhani">
-          Usha Martin University • Genesis of Tomorrow
+          Usha Martin University • Where Innovation Knows No Boundaries
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onShowToast }) => {
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-inter">
-            Collaborating with forward-thinking tech enterprises, venture mentors, and developer ecosystems empowering the Genesis of Tomorrow.
+            Collaborating with forward-thinking tech enterprises, venture mentors, and developer ecosystems where innovation knows no boundaries.
           </p>
         </div>
 

@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
               <MartinovationLogo size="md" />
             </div>
             <p className="text-slate-400 text-sm font-inter leading-relaxed max-w-sm">
-              The premier annual techno-cultural festival of <strong>Usha Martin University</strong>. Fostering bold engineering minds, creative visionaries, and impactful solutions for the Genesis of Tomorrow.
+              The premier annual techno-cultural festival of <strong>Usha Martin University</strong>. Fostering bold engineering minds, creative visionaries, and impactful solutions — where innovation knows no boundaries.
             </p>
             <div className="flex items-center gap-2 text-xs font-rajdhani text-cyan-400 font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />

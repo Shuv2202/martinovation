@@ -266,8 +266,8 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({
               <span className="text-xs font-orbitron font-bold text-yellow-400 uppercase tracking-widest">
                 Registration Confirmed
               </span>
-              <h3 className="font-orbitron text-2xl sm:text-3xl font-black text-white">
-                Welcome to Genesis of Tomorrow!
+              <h3 className="font-orbitron text-xl sm:text-2xl font-black text-white">
+                Where Innovation Knows No Boundaries!
               </h3>
               <p className="text-slate-300 text-sm font-inter max-w-md mx-auto">
                 Thank you, <strong className="text-white">{formData.participantName}</strong>. Your entry for <strong className="text-cyan-300">{selectedEvent?.name}</strong> has been logged.

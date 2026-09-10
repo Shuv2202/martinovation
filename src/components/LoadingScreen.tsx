@@ -15,7 +15,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
       'Connecting to UMU Cyber Core...',
       'Calibrating Robotics & Code Arenas...',
       'Synchronizing Event Matrices...',
-      'Genesis of Tomorrow Ready.'
+      'Where Innovation Knows No Boundaries.'
     ];
 
     const timer = setInterval(() => {
@@ -59,8 +59,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
           <h2 className="font-orbitron text-2xl font-black tracking-widest text-white">
             MARTIN<span className="text-cyan-400">OVATION</span>
           </h2>
-          <p className="text-xs font-orbitron font-bold tracking-[0.25em] text-yellow-400 uppercase">
-            GENESIS OF TOMORROW
+          <p className="text-[10px] sm:text-xs font-orbitron font-bold tracking-[0.18em] text-yellow-400 uppercase">
+            WHERE INNOVATION KNOWS NO BOUNDARIES
           </p>
           <p className="text-[11px] font-rajdhani text-slate-400 uppercase tracking-wider">
             Usha Martin University • Ranchi

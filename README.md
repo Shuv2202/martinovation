@@ -1,4 +1,4 @@
-# Martinovation — Genesis of Tomorrow
+# Martinovation — Where Innovation Knows No Boundaries
 
 Official Techno-Management Fest & Hackathon Web Portal for Usha Martin University (UMU), Angara, Ranchi.
 
