@@ -4,8 +4,6 @@ import {
   X, 
   ArrowUpRight, 
   Sparkles, 
-  Volume2, 
-  VolumeX, 
   Bookmark,
   Radio
 } from 'lucide-react';
@@ -23,11 +21,9 @@ const NAV_ITEMS = [
   { label: 'About', href: '#about' },
   { label: 'Arenas', href: '#events' },
   { label: 'Schedule', href: '#schedule' },
-  { label: 'Radar', href: '#campus' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Radar', href: '#radar' },
   { label: 'Sponsors', href: '#sponsors' },
-  { label: 'Team', href: '#team' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#contact' }
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({ 
@@ -38,7 +34,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [soundEnabled, setSoundEnabled] = useState(sound.isEnabled());
 
   // Track scroll state and active section
   useEffect(() => {
@@ -86,101 +81,75 @@ export const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
-  const handleToggleSound = () => {
-    const newState = sound.toggle();
-    setSoundEnabled(newState);
-  };
-
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#050811]/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-[0_4px_30px_rgba(0,0,0,0.85)] py-2.5'
-            : 'bg-gradient-to-b from-[#050811]/95 via-[#050811]/70 to-transparent py-4'
+            ? 'bg-[#050811]/90 backdrop-blur-xl border-b border-cyan-500/20 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.8)]'
+            : 'bg-gradient-to-b from-[#050811]/90 via-[#050811]/50 to-transparent py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
-          {/* Brand Logo with Live Status */}
-          <div className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Brand Logo */}
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="group focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-0.5"
-              aria-label="Martinovation 2026 Home"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1"
             >
               <MartinovationLogo size="sm" />
             </a>
 
-            <div className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[10px] font-mono text-cyan-400">
-              <Radio className="w-3 h-3 text-emerald-400 animate-pulse" />
-              <span>GENESIS_OS // ONLINE</span>
-            </div>
-          </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2 px-4 py-1.5 rounded-full bg-slate-950/70 border border-slate-800/80 backdrop-blur-md shadow-inner">
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeSection === item.href.substring(1);
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className={`relative px-3.5 py-1.5 rounded-full text-xs font-orbitron font-medium tracking-wide transition-all ${
+                      isActive
+                        ? 'text-cyan-300 font-bold bg-cyan-500/10 shadow-[0_0_12px_rgba(0,240,255,0.2)]'
+                        : 'text-slate-300 hover:text-cyan-200 hover:bg-slate-900/60'
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-[2px] bg-cyan-400 rounded-full shadow-[0_0_8px_#00f0ff]" />
+                    )}
+                  </a>
+                );
+              })}
+            </nav>
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 bg-slate-900/70 border border-slate-800/90 rounded-full px-3 py-1.5 backdrop-blur-md">
-            {NAV_ITEMS.map((item) => {
-              const isActive = activeSection === item.href.substring(1);
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 focus:outline-none ${
-                    isActive
-                      ? 'text-cyan-300 font-semibold shadow-[0_0_12px_rgba(0,240,255,0.25)]'
-                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+            {/* Action CTAs: Deck Shortlist & Register */}
+            <div className="flex items-center gap-2 sm:gap-2.5">
+              {/* My Festival Deck Shortlist Button */}
+              {onOpenDeck && (
+                <button
+                  onClick={() => {
+                    sound.playClick();
+                    onOpenDeck();
+                  }}
+                  className={`relative px-3 py-2 rounded-lg border text-xs font-rajdhani font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+                    deckCount > 0
+                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_12px_rgba(0,240,255,0.3)]'
+                      : 'bg-slate-900/80 border-slate-800 text-slate-300 hover:border-slate-700'
                   }`}
+                  title="View Shortlisted Challenges"
                 >
-                  {isActive && (
-                    <span className="absolute inset-0 rounded-full bg-cyan-500/20 border border-cyan-500/40 -z-10" />
+                  <Bookmark className={`w-3.5 h-3.5 ${deckCount > 0 ? 'fill-cyan-400 text-cyan-400' : ''}`} />
+                  <span className="hidden sm:inline">Deck</span>
+                  {deckCount > 0 && (
+                    <span className="w-4 h-4 rounded-full bg-cyan-400 text-black font-mono text-[10px] font-black flex items-center justify-center">
+                      {deckCount}
+                    </span>
                   )}
-                  {item.label}
-                </a>
-              );
-            })}
-          </nav>
-
-          {/* Action CTAs: Sound, Deck Shortlist & Register */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Audio Toggle */}
-            <button
-              onClick={handleToggleSound}
-              className={`p-2 rounded-lg border transition-all text-xs flex items-center justify-center ${
-                soundEnabled
-                  ? 'bg-slate-900/90 border-cyan-500/40 text-cyan-300 hover:border-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.15)]'
-                  : 'bg-slate-900/60 border-slate-800 text-slate-500 hover:text-slate-300'
-              }`}
-              title={soundEnabled ? 'Mute Interface Sound' : 'Enable Interface Sound'}
-              aria-label="Toggle Sound Effects"
-            >
-              {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-            </button>
-
-            {/* My Festival Deck Shortlist Button */}
-            {onOpenDeck && (
-              <button
-                onClick={() => {
-                  sound.playClick();
-                  onOpenDeck();
-                }}
-                className={`relative px-3 py-2 rounded-lg border text-xs font-rajdhani font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
-                  deckCount > 0
-                    ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_12px_rgba(0,240,255,0.3)]'
-                    : 'bg-slate-900/80 border-slate-800 text-slate-300 hover:border-slate-700'
-                }`}
-                title="View Shortlisted Challenges"
-              >
-                <Bookmark className={`w-3.5 h-3.5 ${deckCount > 0 ? 'fill-cyan-400 text-cyan-400' : ''}`} />
-                <span className="hidden sm:inline">Deck</span>
-                {deckCount > 0 && (
-                  <span className="w-4 h-4 rounded-full bg-cyan-400 text-black font-mono text-[10px] font-black flex items-center justify-center">
-                    {deckCount}
-                  </span>
-                )}
-              </button>
-            )}
+                </button>
+              )}
 
             {/* Primary Register CTA */}
             <button
@@ -209,7 +178,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* Mobile Menu Drawer */}
       <div
