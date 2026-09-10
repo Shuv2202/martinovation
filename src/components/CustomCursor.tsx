@@ -67,10 +67,10 @@ export const CustomCursor: React.FC = () => {
       }}
     >
       <div
-        className={`rounded-full transition-all duration-150 ease-out ${
+        className={`rounded-full border transition-all duration-150 ease-out bg-black ${
           isHovered
-            ? 'w-4 h-4 bg-cyan-300 shadow-[0_0_16px_#00f0ff] ring-2 ring-cyan-400/50 scale-125'
-            : 'w-2.5 h-2.5 bg-cyan-400 shadow-[0_0_10px_#00f0ff]'
+            ? 'w-4 h-4 border-cyan-400 ring-2 ring-cyan-500/50 shadow-[0_0_14px_rgba(0,240,255,0.8)] scale-125'
+            : 'w-3 h-3 border-cyan-400/90 shadow-[0_0_8px_rgba(0,240,255,0.5)]'
         }`}
       />
     </div>
